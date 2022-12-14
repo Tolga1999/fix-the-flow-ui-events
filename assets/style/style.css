@@ -93,8 +93,9 @@ a:hover {
   }
 }
 
+/* button & */
 .and-animation {
-  animation: move-up-and-down-animation 2s;
+  animation: move-up-and-down-animation 2s cubic-bezier(0,-0.77,1,-0.76);
 }
 
 @keyframes move-up-and-down-animation {
@@ -109,4 +110,14 @@ a:hover {
   100% {
     transform: translateY(0);
   }
+}
+
+/* button development */
+/* animatie op element zelf gezet + transition omdat je het kan onderbreken */
+a:nth-of-type(4){
+  transition: transform 2s cubic-bezier(.17,.67,0,1);
+}
+
+.development-animation{
+  transform: rotateY(180deg);
 }

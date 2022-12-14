@@ -27,3 +27,13 @@ andAnchor.addEventListener('animationend', andAnchorClick);
 function andAnchorClick(){
   andAnchor.classList.toggle('and-animation');
 }
+
+// development button
+let developmentAnchor = document.querySelector('a:nth-of-type(4)');
+
+developmentAnchor.addEventListener('click', developmentAnchorClick);
+// developmentAnchor.addEventListener('animationend', developmentAnchorClick);
+
+function developmentAnchorClick(){
+  developmentAnchor.classList.toggle('development-animation');
+}
