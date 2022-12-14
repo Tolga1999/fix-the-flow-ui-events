@@ -8,9 +8,11 @@
   --pill: 2rem;
   --line: 0.1rem;
 }
+
 * {
   box-sizing: border-box;
 }
+
 body {
   margin: 2rem;
   padding: 0;
@@ -18,9 +20,11 @@ body {
   font-size: 2rem;
   background: var(--secondary);
 }
+
 section {
   max-width: 90vw;
 }
+
 a {
   display: inline-block;
   margin: 0.2em;
@@ -32,6 +36,7 @@ a {
   font-weight: normal;
   text-decoration: none;
 }
+
 a:hover {
   color: var(--primary);
   border-color: var(--primary);
@@ -39,43 +44,69 @@ a:hover {
 
 /* UI Event Classes */
 
-/* Jump animation on the interaction link */
-a:nth-of-type(12) {
-  position: relative;
-  background: var(--highlight-secondary);
-  color: var(--secondary);
-  border-color: var(--secondary);
+/* button Frontend */
+.frontend-animation {
+  animation: color-animation 1.25s infinite;
 }
 
-.jump {
-  animation-name: jump;
-  animation-timing-function: cubic-bezier(0.28, 0.84, 0.42, 1);
-  animation-duration: 1.2s;
-  animation-iteration-count: 1;
-}
-
-@keyframes jump {
+/* color animation */
+@keyframes color-animation {
   0% {
-    transform: scale(1, 1) translateY(0);
+    background-color: red;
   }
-  10% {
-    transform: scale(1.1, 0.9) translateY(0);
+
+  25% {
+    background-color: yellow;
   }
-  30% {
-    transform: scale(0.9, 1.1) translateY(-5rem) rotate(10deg);
-  }
+
   50% {
-    transform: scale(1.05, 0.95) translateY(0);
+    background-color: blue;
+
   }
-  57% {
-    transform: scale(1, 1) translateY(-0.5rem) rotate(-2deg);
+
+  75% {
+    background-color: green;
+
   }
-  64% {
-    transform: scale(1, 1) translateY(0);
-  }
+
   100% {
-    transform: scale(1, 1) translateY(0);
+    background-color: red;
   }
 }
 
-/* Jouw animaties */
+/* button Design */
+.design-animation {
+  animation: bigger-animation 2s;
+}
+
+@keyframes bigger-animation {
+  0% {
+    transform: scale(1);
+  }
+
+  50% {
+    transform: scale(1.5);
+  }
+
+  100% {
+    transform: scale(1);
+  }
+}
+
+.and-animation {
+  animation: move-up-and-down-animation 2s;
+}
+
+@keyframes move-up-and-down-animation {
+  0% {
+    transform: translateY(0);
+  }
+
+  50% {
+    transform: translateY(-10vh);
+  }
+
+  100% {
+    transform: translateY(0);
+  }
+}

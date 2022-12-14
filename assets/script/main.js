@@ -1,8 +1,29 @@
-let interaction = document.querySelector('a:nth-of-type(12)')
+// frontend button
+let frontendAnchor = document.querySelector('a:nth-of-type(1)');
 
-interaction.addEventListener('click', jumpHandler)
-interaction.addEventListener('animationend', jumpHandler)
+frontendAnchor.addEventListener('click', frontendAnchorClick);
+frontendAnchor.addEventListener('animationend', frontendAnchorClick);
 
-function jumpHandler() {
-  interaction.classList.toggle('jump')
+function frontendAnchorClick(){
+  frontendAnchor.classList.toggle('frontend-animation');
+}
+
+// design button
+let designAnchor = document.querySelector('a:nth-of-type(2)');
+
+designAnchor.addEventListener('click', designAnchorClick);
+designAnchor.addEventListener('animationend', designAnchorClick);
+
+function designAnchorClick(){
+  designAnchor.classList.toggle('design-animation');
+}
+
+// & button
+let andAnchor = document.querySelector('a:nth-of-type(3)');
+
+andAnchor.addEventListener('click', andAnchorClick);
+andAnchor.addEventListener('animationend', andAnchorClick);
+
+function andAnchorClick(){
+  andAnchor.classList.toggle('and-animation');
 }
