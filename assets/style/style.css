@@ -76,7 +76,7 @@ a:hover {
 
 /* button Design */
 .design-animation {
-  animation: bigger-animation 2s;
+  animation: bigger-animation 1s forwards;
 }
 
 @keyframes bigger-animation {
@@ -84,18 +84,14 @@ a:hover {
     transform: scale(1);
   }
 
-  50% {
-    transform: scale(1.5);
-  }
-
   100% {
-    transform: scale(1);
+    transform: scale(1.5);
   }
 }
 
 /* button & */
 .and-animation {
-  animation: move-up-and-down-animation 2s cubic-bezier(0,-0.77,1,-0.76);
+  animation: move-up-and-down-animation 2s cubic-bezier(0, -0.77, 1, -0.76) forwards;
 }
 
 @keyframes move-up-and-down-animation {
@@ -108,16 +104,162 @@ a:hover {
   }
 
   100% {
-    transform: translateY(0);
+    transform: translateY(50vh);
   }
 }
 
-/* button development */
+/* button Development */
 /* animatie op element zelf gezet + transition omdat je het kan onderbreken */
-a:nth-of-type(4){
-  transition: transform 2s cubic-bezier(.17,.67,0,1);
+a:nth-of-type(4) {
+  transition: transform 2s cubic-bezier(.17, .67, 0, 1);
 }
 
-.development-animation{
+.development-animation {
   transform: rotateY(180deg);
+}
+
+/* button Sprint 5 */
+.sprint5-animation {
+  animation: move-up-shrink-move-down 2s linear forwards;
+}
+
+@keyframes move-up-shrink-move-down {
+  0% {
+    border-radius: 2rem;
+    transform: translateX(0vh);
+    position: absolute;
+  }
+
+  25% {
+    border-radius: 1rem;
+    transform: translateX(75vh);
+  }
+
+  50% {
+    border-radius: 0.75rem;
+    transform: translateX(-75vh);
+  }
+
+  75% {
+    border-radius: 0.25rem;
+    transform: translateY(75vh) translateX(-75vh);
+  }
+
+  100% {
+    border-radius: 0rem;
+    transform: translateY(75vh) translateX(75vh);
+    font-size: 5rem;
+    position: absolute;
+    z-index: 1;
+  }
+}
+
+/* button Fix */
+.fix-animation {
+  animation: move-right-move-down-move-back 2.5s linear forwards;
+}
+
+@keyframes move-right-move-down-move-back {
+  0% {
+    transform: translateX(0vw) translateY(0vh);
+  }
+
+  50% {
+    transform: translateX(35vw) translateY(0vh);
+  }
+
+  75% {
+    transform: translateX(35vw) translateY(80vh);
+  }
+
+  90% {
+    transform: translateX(0vw) translateY(0vh);
+    width: 5.5%;
+    padding-right: 60px;
+  }
+
+  100% {
+    transform: translateX(0vw) translateY(0vh);
+    padding-right: 200px;
+    position: absolute;
+  }
+}
+
+/* button The */
+.the-animation {
+  animation: circle-loop 2s cubic-bezier(.46, 1.42, .8, 1.42) forwards;
+}
+
+@keyframes circle-loop {
+  from {
+    transform: rotate(0);
+  }
+
+  to {
+    transform: rotate(360deg) translateY(75vh);
+
+  }
+}
+
+/* button flow */
+.flow-animation {
+  animation: square-border 2s cubic-bezier(.66, 1.57, .79, 1.98) forwards;
+}
+
+@keyframes square-border {
+  to {
+    border-radius: 0;
+    border-color: chartreuse;
+    transform: skew(30deg);
+  }
+}
+
+/* button user */
+.user-animation {
+  animation: fill-item 1s ease forwards;
+}
+
+@keyframes fill-item {
+  0% {
+    background-image: linear-gradient(to right, var(--secondary), var(--secondary), var(--secondary), var(--secondary));
+  }
+
+  25% {
+    background-image: linear-gradient(to right, hotpink, var(--secondary), var(--secondary), var(--secondary));
+  }
+
+  50% {
+    background-image: linear-gradient(to right, hotpink, hotpink, var(--secondary), var(--secondary));
+  }
+
+  75% {
+    background-image: linear-gradient(to right, hotpink, hotpink, hotpink, var(--secondary));
+  }
+
+  100% {
+    background-image: linear-gradient(to right, hotpink, hotpink, hotpink, hotpink);
+  }
+}
+
+/* button interface */
+.interface-animation {
+  animation: wiggle 2s ease forwards;
+}
+
+@keyframes wiggle {
+  0% {
+    transform: rotate(0deg);
+  }
+
+  25%{
+    transform: rotate(-5deg);
+  }
+
+  75%{
+    transform: rotate(5deg);
+  }
+
+  100% {
+    transform: rotate(0deg);
+  }
 }
