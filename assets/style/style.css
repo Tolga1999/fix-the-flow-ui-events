@@ -266,5 +266,7 @@ a:nth-of-type(4) {
 
   100% {
     transform: rotate(0deg);
+    /* je kan per state een animatie soort toevoegen! DIT IS VOOR LATER */
+    /* animation-timing-function: cubic-bezier(0.075, 0.82, 0.165, 1); */
   }
 }
