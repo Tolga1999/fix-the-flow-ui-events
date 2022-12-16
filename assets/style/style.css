@@ -182,6 +182,7 @@ a:nth-of-type(4) {
     transform: translateX(0vw) translateY(0vh);
     padding-right: 200px;
     position: absolute;
+    z-index: 1;
   }
 }
 
