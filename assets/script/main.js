@@ -8,7 +8,7 @@ function frontendAnchorClick(){
 
 // design button
 let designAnchor = document.querySelector('a:nth-of-type(2)');
-designAnchor.addEventListener('click', designAnchorClick);
+designAnchor.addEventListener('dblclick', designAnchorClick);
 
 function designAnchorClick(){
   designAnchor.classList.add('design-animation');
@@ -16,7 +16,7 @@ function designAnchorClick(){
 
 // & button
 let andAnchor = document.querySelector('a:nth-of-type(3)');
-andAnchor.addEventListener('click', andAnchorClick);
+andAnchor.addEventListener('focusout', andAnchorClick);
 
 function andAnchorClick(){
   andAnchor.classList.add('and-animation');
@@ -24,7 +24,7 @@ function andAnchorClick(){
 
 // development button
 let developmentAnchor = document.querySelector('a:nth-of-type(4)');
-developmentAnchor.addEventListener('click', developmentAnchorClick);
+developmentAnchor.addEventListener('keydown', developmentAnchorClick);
 
 function developmentAnchorClick(){
   developmentAnchor.classList.toggle('development-animation');
@@ -32,7 +32,7 @@ function developmentAnchorClick(){
 
 // Sprint 5 button
 let sprint5Anchor = document.querySelector('a:nth-of-type(5)');
-sprint5Anchor.addEventListener('click', sprint5AnchorClick);
+sprint5Anchor.addEventListener('keyup', sprint5AnchorClick);
 
 function sprint5AnchorClick(){
   sprint5Anchor.classList.add('sprint5-animation');
@@ -40,7 +40,7 @@ function sprint5AnchorClick(){
 
 // Fix button
 let fixAnchor = document.querySelector('a:nth-of-type(6)');
-fixAnchor.addEventListener('click', fixAnchorClick);
+fixAnchor.addEventListener('mouseleave', fixAnchorClick);
 
 function fixAnchorClick(){
   fixAnchor.classList.add('fix-animation');
@@ -48,7 +48,7 @@ function fixAnchorClick(){
 
 // The button
 let theAnchor = document.querySelector('a:nth-of-type(7)');
-theAnchor.addEventListener('click', theAnchorClick);
+theAnchor.addEventListener('mouseup', theAnchorClick);
 
 function theAnchorClick(){
   theAnchor.classList.add('the-animation');
@@ -56,7 +56,7 @@ function theAnchorClick(){
 
 // Flow button
 let flowAnchor = document.querySelector('a:nth-of-type(8)');
-flowAnchor.addEventListener('click', flowAnchorClick);
+flowAnchor.addEventListener('focus', flowAnchorClick);
 
 function flowAnchorClick(){
   flowAnchor.classList.add('flow-animation');
@@ -64,7 +64,7 @@ function flowAnchorClick(){
 
 // User button
 let userAnchor = document.querySelector('a:nth-of-type(9)');
-userAnchor.addEventListener('click', userAnchorClick);
+userAnchor.addEventListener('keypress', userAnchorClick);
 
 function userAnchorClick(){
   userAnchor.classList.add('user-animation');
